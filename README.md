@@ -1,2 +1,2 @@
 # Kugus-digiligi-cegevigirigi
-Kuguş digiligi çegevigirigi sigiteges
+Mahallede konuştuğumuz Kuguş Digili Çegevigirigi
