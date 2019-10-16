@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuguş Digiligi</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    body {
+        background: black;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h2 {
+        text-align: center;
+        color: white;
+    }
+    textarea {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        height: 75px;
+    }
+    a {
+        color: white;
+        position: absolute;
+        bottom: 20px;
+    }
+</style>
+
+<body>
+    <img src="https://yt3.ggpht.com/a/AGF-l7-hRH8b2vQfQvrbkKlzvL_prHsC606sNWLvfA=s176-c-k-c0x00ffffff-no-rj-mo">
+    <h2>Pogorçagay Kuguş Digiligi Çegevigirigicigi</h2>
+    <div>
+        <textarea placeholder="Kuguş Digiliginege Çegevigir" id="tr-kd"></textarea>
+        <br>
+        <textarea placeholder="Türkçeye Çevir" id="kd-tr"></textarea>
+    </div>
+    <a target="_blank" href="https://twitter.com/AhmetcanAksu_">Made by @AhmetcanAksu_</a>
+</body>
+<script>
+    window.onload = function() {
+        document.getElementById("kd-tr").onkeydown = () => (function(parent){document.getElementById("tr-kd").value = parent.value.split('').map((x,y)=>parent.value.length==y?x:x=='g'&&['a','e','u','ı','o','ü','i','ö'].includes(parent.value.split('')[y-1])?'':parent.value.split('')[y-1]=='g'&&['a','e','u','ı','o','ü','i','ö'].includes(parent.value.split('')[y-2])?'':parent.value.split('')[y]).join('')})(document.getElementById("kd-tr"));        
+        document.getElementById("tr-kd").onkeydown = () => (function(parent){document.getElementById('kd-tr').value = parent.value.split('').map((x,y) => ['a','e','u','ı','o','ü','i','ö'].includes(x) ? x+'g'+x: x).join('');})(document.getElementById("tr-kd"));
+    }   
+</script>
+</html>
