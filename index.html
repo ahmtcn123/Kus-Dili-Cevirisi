@@ -47,7 +47,7 @@
 </body>
 <script>
     window.onload = function() {
-        var isU = t => t == t.localeUpperCase();
+        var isU = t => t == t.toLocaleUpperCase();
         document.getElementById("kd-tr").onkeyup = () => (function(parent){document.getElementById("tr-kd").value = parent.value.split('').map((x,y)=>parent.value.length==y?x:x=='g'&&['a','e','u','ı','o','ü','i','ö',"â","ğ","û","î"].includes(parent.value.split('')[y-1].toLocaleLowerCase())?'':parent.value.split('')[y-1]=='g'&&['a','e','u','ı','o','ü','i','ö',"â","ğ","û","î"].includes(parent.value.split('')[y-2].toLocaleLowerCase())?'':parent.value.split('')[y]).join('')})(document.getElementById("kd-tr"));        
         document.getElementById("tr-kd").onkeyup = () => (function(parent){document.getElementById('kd-tr').value = parent.value.split('').map((x,y) => ['a','e','u','ı','o','ü','i','ö',"â","ğ","û","î"].includes(x.toLocaleLowerCase()) ? x+(isU(x)?'G':'g')+x: x).join('');})(document.getElementById("tr-kd"));
     }   
