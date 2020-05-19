@@ -47,8 +47,8 @@
 </body>
 <script>
     window.onload = function() {
-        document.getElementById("kd-tr").onkeydown = () => (function(parent){document.getElementById("tr-kd").value = parent.value.split('').map((x,y)=>parent.value.length==y?x:x=='g'&&['a','e','u','ı','o','ü','i','ö'].includes(parent.value.split('')[y-1])?'':parent.value.split('')[y-1]=='g'&&['a','e','u','ı','o','ü','i','ö'].includes(parent.value.split('')[y-2])?'':parent.value.split('')[y]).join('')})(document.getElementById("kd-tr"));        
-        document.getElementById("tr-kd").onkeydown = () => (function(parent){document.getElementById('kd-tr').value = parent.value.split('').map((x,y) => ['a','e','u','ı','o','ü','i','ö'].includes(x) ? x+'g'+x: x).join('');})(document.getElementById("tr-kd"));
+        document.getElementById("kd-tr").onkeydown = () => (function(parent){document.getElementById("tr-kd").value = (parent.value+" ").split('').map((x,y)=>parent.value.length==y?x:x=='g'&&['a','e','u','ı','o','ü','i','ö'].includes(parent.value.split('')[y-1])?'':parent.value.split('')[y-1]=='g'&&['a','e','u','ı','o','ü','i','ö'].includes(parent.value.split('')[y-2])?'':parent.value.split('')[y]).join('')})(document.getElementById("kd-tr"));        
+        document.getElementById("tr-kd").onkeydown = () => (function(parent){document.getElementById('kd-tr').value = (parent.value+" ").split('').map((x,y) => ['a','e','u','ı','o','ü','i','ö'].includes(x) ? x+'g'+x: x).join('');})(document.getElementById("tr-kd"));
     }   
 </script>
 </html>
